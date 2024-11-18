@@ -1,0 +1,60 @@
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<div class="background-container">
+  
+  <mat-card style="width: 70%; margin: 50px auto">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="logo-container">
+          <img src="assets/OIG1.jfif.png" alt="Logo" class="logo">
+        </div>
+        <h2>Lista de Empleados</h2>
+      </mat-card-title>
+    </mat-card-header> 
+    <mat-card-content>
+      <button mat-flat-button  (click)="nuevo()" class="boton-efecto">Nuevo Empleado</button>
+      <table mat-table [dataSource]="listaEmpleados" class="mat-elevation-z2" style="margin-top:20px;">
+
+       
+        <ng-container matColumnDef="nombreCompleto">
+          <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreCompleto}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="correo">
+          <th mat-header-cell *matHeaderCellDef> Correo </th>
+          <td mat-cell *matCellDef="let element"> {{element.correo}} </td>
+        </ng-container>
+
+       
+        <ng-container matColumnDef="sueldo">
+          <th mat-header-cell *matHeaderCellDef> Sueldo </th>
+          <td mat-cell *matCellDef="let element"> {{element.sueldo}} </td>
+        </ng-container>
+
+       
+        <ng-container matColumnDef="fechaContrato">
+          <th mat-header-cell *matHeaderCellDef> Fecha Contrato </th>
+          <td mat-cell *matCellDef="let element"> {{element.fechaContrato}} </td>
+        </ng-container>
+
+        
+        <ng-container matColumnDef="accion">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" (click)="editar(element)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="eliminar(element)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
