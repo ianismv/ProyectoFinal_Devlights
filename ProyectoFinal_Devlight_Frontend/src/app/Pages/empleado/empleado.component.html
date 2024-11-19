@@ -10,7 +10,7 @@
       <mat-form-field>
         <mat-label>Nombre Completo</mat-label>
         <input matInput formControlName="nombreCompleto">
-        <mat-error *ngIf="formEmpleado.get('nombreCompleto')?.hasError('required')">
+        <mat-error *@If="formEmpleado.get('nombreCompleto')?.hasError('required')">
           El nombre completo es obligatorio.
         </mat-error>
       </mat-form-field>
@@ -20,10 +20,10 @@
       <mat-form-field>
         <mat-label>Correo</mat-label>
         <input matInput formControlName="correo">
-        <mat-error *ngIf="formEmpleado.get('correo')?.hasError('required')">
+        <mat-error *@If="formEmpleado.get('correo')?.hasError('required')">
           El correo es obligatorio.
         </mat-error>
-        <mat-error *ngIf="formEmpleado.get('correo')?.hasError('email')">
+        <mat-error *@If="formEmpleado.get('correo')?.hasError('email')">
           El correo debe ser válido.
         </mat-error>
       </mat-form-field>
@@ -33,10 +33,10 @@
       <mat-form-field>
         <mat-label>Sueldo</mat-label>
         <input matInput type="number" formControlName="sueldo">
-        <mat-error *ngIf="formEmpleado.get('sueldo')?.hasError('required')">
+        <mat-error *@If="formEmpleado.get('sueldo')?.hasError('required')">
           El sueldo es obligatorio.
         </mat-error>
-        <mat-error *ngIf="formEmpleado.get('sueldo')?.hasError('min')">
+        <mat-error *@If="formEmpleado.get('sueldo')?.hasError('min')">
           El sueldo debe ser mayor que 0.
         </mat-error>
       </mat-form-field>
@@ -46,7 +46,7 @@
       <mat-form-field>
         <mat-label>Fecha Contrato</mat-label>
         <input matInput formControlName="fechaContrato">
-        <mat-error *ngIf="formEmpleado.get('fechaContrato')?.hasError('required')">
+        <mat-error *@If="formEmpleado.get('fechaContrato')?.hasError('required')">
           La fecha de contrato es obligatoria.
         </mat-error>
       </mat-form-field>
