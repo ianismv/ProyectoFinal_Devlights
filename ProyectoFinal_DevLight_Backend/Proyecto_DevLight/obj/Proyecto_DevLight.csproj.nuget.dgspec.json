@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Scarface\\source\\repos\\Proyecto_DevLight\\Proyecto_DevLight\\Proyecto_DevLight.csproj": {}
+    "C:\\Users\\Usuario\\source\\ProyectoFinal\\Proyecto_Final_DevLight\\ProyectoFinal_DevLight_Backend\\Proyecto_DevLight\\Proyecto_DevLight.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Scarface\\source\\repos\\Proyecto_DevLight\\Proyecto_DevLight\\Proyecto_DevLight.csproj": {
+    "C:\\Users\\Usuario\\source\\ProyectoFinal\\Proyecto_Final_DevLight\\ProyectoFinal_DevLight_Backend\\Proyecto_DevLight\\Proyecto_DevLight.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Scarface\\source\\repos\\Proyecto_DevLight\\Proyecto_DevLight\\Proyecto_DevLight.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\source\\ProyectoFinal\\Proyecto_Final_DevLight\\ProyectoFinal_DevLight_Backend\\Proyecto_DevLight\\Proyecto_DevLight.csproj",
         "projectName": "Proyecto_DevLight",
-        "projectPath": "C:\\Users\\Scarface\\source\\repos\\Proyecto_DevLight\\Proyecto_DevLight\\Proyecto_DevLight.csproj",
-        "packagesPath": "C:\\Users\\Scarface\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Scarface\\source\\repos\\Proyecto_DevLight\\Proyecto_DevLight\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\source\\ProyectoFinal\\Proyecto_Final_DevLight\\ProyectoFinal_DevLight_Backend\\Proyecto_DevLight\\Proyecto_DevLight.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\source\\ProyectoFinal\\Proyecto_Final_DevLight\\ProyectoFinal_DevLight_Backend\\Proyecto_DevLight\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Scarface\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
