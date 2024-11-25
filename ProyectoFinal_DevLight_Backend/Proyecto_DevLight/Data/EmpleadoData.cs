@@ -66,6 +66,7 @@ namespace Proyecto_DevLight.Data
                         {
                             IdEmpleado = Convert.ToInt32(reader["IdEmpleado"]),
                             NombreCompleto = reader["NombreCompleto"].ToString(),
+                            Correo = reader["Correo"].ToString(),
                             Sueldo = Convert.ToDecimal(reader["Sueldo"]),
                             FechaContrato = reader["FechaContrato"].ToString()
                         };
