@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatIconModule} from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [MatCardModule,MatTableModule,MatIconModule,MatButtonModule],
+  imports: [MatCardModule,MatTableModule,MatIconModule,MatButtonModule,CommonModule],
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
@@ -25,7 +25,10 @@ export class InicioComponent {
     this.empleadoServicio.lista().subscribe({
       next:(data)=>{
         if(data.length > 0){
-          this.listaEmpleados = data;
+          this.listaEmpleados = data; // Asignar la lista de empleados si hay empleados
+        }
+        else {
+          this.listaEmpleados = []; // Asignar una lista vacía si no hay empleados
         }
       },
       error:(err)=>{
