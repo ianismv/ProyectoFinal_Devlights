@@ -55,13 +55,24 @@ export class EmpleadoComponent implements OnInit {
   ngOnInit(): void {
     if (this.idEmpleado != 0) {
       this.titulo = 'Editar Empleado';
+    this.spinner.show();  // Muestra el spinner antes de hacer la llamada al backend
       this.empleadoServicio.obtener(this.idEmpleado).subscribe({
         next: (data) => {
+          this.spinner.hide();
+          console.log(data);
+          let fechaContrato: string = '';
+
+          if (data.fechaContrato) {
+            const [dia, mes, anio] = data.fechaContrato.split('/'); // Se asume formato 'dd/MM/yyyy'
+            const fecha = new Date(`${anio}-${mes}-${dia}`);  // Crea un objeto Date con el formato 'yyyy-MM-dd'
+
+            fechaContrato = fecha.toISOString().split('T')[0]; // Extrae solo la parte 'yyyy-MM-dd'
+          }
           this.formEmpleado.patchValue({
             nombreCompleto: data.nombreCompleto,
             correo: data.correo,
             sueldo: data.sueldo,
-            fechaContrato: data.fechaContrato
+            fechaContrato: fechaContrato
           })
         },
         error: (err) => {
@@ -93,10 +104,10 @@ export class EmpleadoComponent implements OnInit {
           this.spinner.hide();
           if (data.isSuccess) {
             this.snackBar.open('Empleado cargado correctamente', 'Cerrar', {
-              duration: 3000,  // Duración en milisegundos
+              duration: 3000,
               horizontalPosition: 'center',
               verticalPosition: 'top',
-              panelClass: ['success-snackbar']  // Puedes añadir una clase para estilizar el mensaje
+              panelClass: ['success-snackbar']
             });
             this.router.navigate(["/"]);
           } else {
@@ -125,6 +136,7 @@ export class EmpleadoComponent implements OnInit {
     } else {
       this.empleadoServicio.editar(objeto).subscribe({
         next: (data) => {
+          this.spinner.hide();
           if (data.isSuccess) {
             this.snackBar.open('Empleado editado correctamente', 'Cerrar', {
               duration: 3000,
@@ -144,6 +156,7 @@ export class EmpleadoComponent implements OnInit {
           }
         },
         error: (err) => {
+          this.spinner.hide();
           this.snackBar.open('Error al editar el empleado', 'Cerrar', {
             duration: 3000,
             horizontalPosition: 'center',
