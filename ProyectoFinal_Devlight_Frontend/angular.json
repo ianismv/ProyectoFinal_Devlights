@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
@@ -106,6 +107,7 @@
               }
             ],
             "styles": [
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
@@ -114,5 +116,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "982a1703-9fe2-4a9d-b80a-73773699af12"
   }
 }
