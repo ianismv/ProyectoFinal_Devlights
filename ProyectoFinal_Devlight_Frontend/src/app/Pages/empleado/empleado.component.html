@@ -39,7 +39,8 @@
     <div class="flex">
       <mat-form-field>
         <mat-label>Sueldo</mat-label>
-        <input matInput type="number" formControlName="sueldo">
+        <div class="currency-prefix">$</div> <!-- Usamos un div para el prefijo -->
+        <input matInput type="number" formControlName="sueldo" class="sueldo-input">
         <mat-error *ngIf="formEmpleado.get('sueldo')?.hasError('required')">
           El sueldo es obligatorio.
         </mat-error>

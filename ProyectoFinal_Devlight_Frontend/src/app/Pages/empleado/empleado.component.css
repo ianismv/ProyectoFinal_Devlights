@@ -56,16 +56,12 @@
     align-items: center;
   }
 
-
-
   @media (max-width: 768px) {
     h2 {
       font-size: 18px; /* Reduce el tamaño del texto en pantallas pequeñas */
       padding: 8px;
     }
   }
-
-
 
   .responsive-form {
     width: 90%;
@@ -108,6 +104,17 @@
   overflow-wrap: break-word; /* Compatibilidad adicional para romper palabras largas */
 }
 
+.sueldo-input {
+  padding-left: 30px; /* Asegura espacio para el signo $ */
+  text-align: left;  /* Alinea el valor a la derecha */
+}
+
+.currency-prefix {
+  position: absolute;
+  font-size: 20px;
+  color: #555;
+}
+
 .btn-volver {
   font-family: 'Bebas Neue', sans-serif; /* Fuente personalizada, más gruesa */
   font-size: 24px; /* Tamaño ajustable */
@@ -140,6 +147,7 @@
   mat-form-field {
     width: 100%;
     margin-bottom: 16px;
+    position: relative;
   }
   @media (max-width: 768px) {
     .buttons {
