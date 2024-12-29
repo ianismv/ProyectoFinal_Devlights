@@ -77,7 +77,7 @@ Abre el navegador y accede a `http://localhost:4200`.
 
 Para conocer más sobre el desarrollo de este proyecto y ver una demostración visual, puedes ver el video de presentación:
 
-🎥 [Ver presentación en YouTube](https://enlace-al-video)
+🎥 [Ver presentación en Drive](https://drive.google.com/file/d/1N4ibtIaopWP6_BXZiCdbtuPD_U9HM8wh/view?usp=drive_link)
 
 > En este video se muestra todo lo trabajado en cuanto al CRUD y sus respectivas validaciones. También como se logró integrar ambas partes (Back-End y Front-End) en una solución coherente.
 
